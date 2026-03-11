@@ -1,86 +1,124 @@
-# Hi, I'm Fernando 👋
+# PhD Thesis — Optimization of Deep Geothermal Drilling
 
-**PhD Candidate in Geomechanical Drilling Engineering**  
-*Mines Paris – PSL, Centre de Géosciences, Fontainebleau, France*
+**Coupled Modeling of Percussion and Shearing Mechanisms for Enhanced Cutting Performance**
 
----
+> *Fernando Uzquiano Al-Ricabi*  
+> Mines Paris – PSL, Centre de Géosciences, Fontainebleau, France  
+> Supervisors: [Supervisor names]  
+> Start: September 2025 · Expected defense: 2028
 
-## 🔬 Research
-
-I work at the intersection of **numerical modeling**, **experimental mechanics**, and **optimization** applied to deep drilling and geomechanics.
-
-My PhD focuses on optimizing deep geothermal drilling through coupled modeling of percussion and shearing mechanisms — combining physics-based simulation, lab experiments, and prototype validation to improve drilling efficiency in hard rock formations.
-
-**Current project:** [HyperDrill](https://github.com/fernandouzquiano) — Franco-German research collaboration between Mines Paris and TU Clausthal on percussive drilling for deep geothermal energy.
+[![Institution](https://img.shields.io/badge/Mines%20Paris%20–%20PSL-Centre%20de%20Géosciences-blue?style=flat)](https://www.minesparis.psl.eu)
+[![Project](https://img.shields.io/badge/Project-HyperDrill-orange?style=flat)]()
+[![Status](https://img.shields.io/badge/Status-Year%201-green?style=flat)]()
 
 ---
 
-## 🛠️ What I work on
+## Context & Motivation
 
-```python
-research_interests = [
-    "Bit-rock interaction & percussive drilling mechanics",
-    "Constitutive modeling of soils and rocks (Manzari-Dafalias)",
-    "Multi-objective optimization & PSO calibration",
-    "Wellbore stability & CCS geomechanics",
-    "Sensitivity analysis (Sobol, Random Forest)",
-    "Coupled hydromechanical FEM modeling",
-]
+Deep geothermal energy is one of the few renewable sources capable of delivering **baseload, carbon-free power** independent of weather conditions. Scaling it up globally requires drilling reliably into **hard crystalline rock** (granite, basalt) at depths exceeding 3–5 km — a regime where conventional rotary drilling tools suffer from rapid wear and very low Rate of Penetration (ROP).
+
+**Percussive drilling** — combining high-frequency impact loading with rotary cutting — is a promising alternative that can significantly increase ROP in hard formations. However, the coupled mechanics of percussion and shearing at the bit-rock interface remain poorly understood, limiting systematic optimization.
+
+This thesis addresses that gap through physics-based numerical modeling.
+
+---
+
+## Research Questions
+
+```
+1. How do percussion and shearing mechanisms interact at the bit-rock interface?
+2. Can a coupled FEM model capture this interaction with sufficient predictive accuracy?
+3. What combination of drilling parameters (impact energy, WOB, RPM, bit geometry)
+   maximizes ROP while minimizing specific energy and tool wear?
 ```
 
 ---
 
-## 🧰 Tech Stack
+## Methodology
 
-**Simulation & Modeling**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat&logo=mathworks&logoColor=white)
+### Coupled Percussion–Shear FEM Model
+
+The core of this thesis is the development of a **finite element model** capturing the simultaneous effect of:
+
+- **Percussive loading** — dynamic impact forces, stress wave propagation in the rock, crater formation
+- **Rotary cutting** — shear-induced chip generation, frictional contact at the bit-rock interface
+- **Coupling effects** — how impact weakens the rock ahead of the cutting edge, and how rotation affects stress redistribution between impacts
+
+**Rock constitutive behavior** is modeled using elastoplastic frameworks adapted to brittle hard rock, accounting for confinement pressure effects relevant to deep drilling conditions.
+
+### Planned Workflow
+
+```
+Literature review & model design
+        ↓
+Benchmark: reproduce published single-indenter results
+        ↓
+Coupled percussion–shear 2D model (axisymmetric)
+        ↓
+Extension to 3D bit geometry
+        ↓
+Parametric study → optimization
+        ↓
+Experimental validation (lab + HyperDrill prototype)
+```
+
+---
+
+## HyperDrill Collaboration
+
+This PhD is embedded in the **HyperDrill** international research project:
+
+| Partner | Contribution |
+|---|---|
+| **Mines Paris – PSL** | Numerical modeling, constitutive modeling, optimization |
+| **TU Clausthal** (Germany) | Experimental platform, prototype drilling rig, field-scale validation |
+
+The Franco-German structure allows tight coupling between model development and experimental feedback — a key methodological asset of this project.
+
+---
+
+## Tools & Environment
 
 | Category | Tools |
 |---|---|
-| Geotechnical FEM | PLAXIS, CLEO 2D-CESAR, TALREN, FOXTA |
-| Numerical simulation | OpenSeesPy, SciPy |
-| Optimization & ML | PSO, Sobol analysis, scikit-learn |
-| Data & visualization | Pandas, Matplotlib, NumPy |
+| FEM | PLAXIS, CLEO 2D-CESAR |
+| Scripting & automation | Python (NumPy, SciPy, Matplotlib) |
+| Optimization | Gradient-free methods, parametric sweeps |
+| Document preparation | LaTeX |
 
 ---
 
-## 📂 Featured Repositories
+## Repository Structure *(in progress)*
 
-| Project | Description | Stack |
-|---|---|---|
-| 🔩 [pso-manzari-calibration](https://github.com/fernandouzquiano) | PSO-based calibration of the Manzari-Dafalias constitutive model for saturated sands | Python, OpenSeesPy |
-| 📊 [sobol-sensitivity-geomech](https://github.com/fernandouzquiano) | Sobol sensitivity analysis & Random Forest screening for geomechanical model parameters | Python, SALib |
-| 🌍 [wellbore-stability-co2](https://github.com/fernandouzquiano) | Geomechanical modeling of wellbore stability during CO₂ injection | Python, MATLAB |
+```
+📦 phd-hyperdrill/
+ ┣ 📂 literature/      # Annotated references and state-of-the-art notes
+ ┣ 📂 numerical/       # FEM models and simulation scripts
+ ┣ 📂 figures/         # Schematics and plots
+ ┣ 📂 reports/         # Progress reports, meeting notes (HyperDrill)
+ └ 📜 README.md
+```
 
-> *Repositories currently being cleaned and documented — check back soon!*
-
-
-
-## 🎓 Background
-
-| Degree | Institution | Year |
-|---|---|---|
-| PhD – Geomechanics & Geothermal Energy | Mines Paris – PSL | 2025 – present |
-| MSc – Geomechanics & Geotechnical Eng. | CentraleSupélec / ENPC | 2023 – 2024 |
-| MSc – Geotechnical & Civil Engineering | ENSG Nancy | 2020 – 2025 |
-
-**Certifications:** Reservoir Geomechanics *(Stanford University, 2023)* · C2 Proficiency *(Cambridge, 2023)*
+> This repository is at an early stage. Code and models will be progressively added as the research develops.
 
 ---
 
-## 🌍 Languages
+## Publications
 
-🇪🇸 Spanish (Native) · 🇫🇷 French (Fluent) · 🇬🇧 English (C2) · 🇮🇶 Arabic (Native) · 🇮🇹 Italian (B2)
-
----
-
-## 📬 Contact
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fernando-uzquiano)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:fernando.uzquiano_al-ricabi@minesparis.psl.eu)
-[![ORCID](https://img.shields.io/badge/ORCID-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org)
+| Reference | Status |
+|---|---|
+| *Coupled percussion–shear FEM modeling for deep geothermal drilling optimization*, F. Uzquiano Al-Ricabi et al. | In preparation |
 
 ---
 
-*"The goal is to turn data and models into decisions that matter underground."*
+## Contact
+
+Open to discussion on bit-rock interaction modeling, hard rock mechanics, or geothermal drilling — feel free to reach out.
+
+- 📧 [fernandouzquiano@outlook.fr](mailto:fernandouzquiano@outlook.fr)
+- 💼 [linkedin.com/in/fernando-uzquiano](https://www.linkedin.com/in/fernando-uzquiano)
+- 🏛️ Mines Paris – PSL, Centre de Géosciences — Fontainebleau, France
+
+---
+
+*Code released under MIT License · Academic content © Fernando Uzquiano Al-Ricabi*
