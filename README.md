@@ -55,14 +55,7 @@ research_interests = [
 
 > *Repositories currently being cleaned and documented — check back soon!*
 
----
 
-## 📄 Publications
-
-- **Uzquiano Al-Ricabi, F.** et al. *PSO-based calibration of the Manzari-Dafalias model: equifinality and parameter identifiability for saturated sands.* *(in preparation, 2025)*
-- **Uzquiano Al-Ricabi, F.** et al. *Coupled percussion–shear modeling for optimized deep geothermal drilling.* *(in preparation, 2025–2026)*
-
----
 
 ## 🎓 Background
 
