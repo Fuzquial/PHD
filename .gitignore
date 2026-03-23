@@ -1,0 +1,46 @@
+# ── Fichiers générés par les scripts ──────────────────────────
+granite_abaqus/
+granite_interfaces/
+granite_sim/
+neper/
+
+# Formats de maillage (potentiellement très lourds)
+*.msh
+*.inp
+*.odb
+*.lck
+*.sim
+*.prt
+*.fil
+
+# Neper outputs
+*.tess
+*.tesr
+*.geo
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+env/
+
+# ── Abaqus ────────────────────────────────────────────────────
+abaqus.rpy
+abaqus.rpy.*
+*.dat
+*.msg
+*.sta
+*.log
+*.023
+*.com
+*.mdl
+*.pac
+*.sel
+*.stt
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
